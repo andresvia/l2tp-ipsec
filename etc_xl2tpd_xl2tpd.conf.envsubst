@@ -1,0 +1,5 @@
+[lac vpn-connection]
+lns = ${ENV_L2TP_IPSEC_REMOTE}
+ppp debug = yes
+pppoptfile = /etc/ppp/options.l2tpd.client
+length bit = yes

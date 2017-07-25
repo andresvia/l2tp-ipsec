@@ -1,0 +1,16 @@
+version: "2.0"
+services:
+        service:
+                build: .
+                privileged: true
+                network_mode: host
+                volumes:
+                        - /lib/modules:/lib/modules:ro
+                environment:
+                        - ENV_L2TP_IPSEC_INTERFACE
+                        - ENV_L2TP_IPSEC_REMOTE
+                        - ENV_L2TP_IPSEC_LOCAL
+                        - ENV_L2TP_IPSEC_PSK
+                        - ENV_L2TP_IPSEC_USERNAME
+                        - ENV_L2TP_IPSEC_PASSWORD
+                command: sleep infinity
